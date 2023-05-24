@@ -1,0 +1,11 @@
+rem make sure we're in the p: drive
+code
+
+from dayz - extract binarised roads to p:\dz\data\structures\roads_bin
+from github - download and extract unbinarised roads to p:\dz\data\structures\roads
+
+have a pre-build button that renames the folders so mikeros can copy the binarised roads from p:\z\..\roads to temp
+then maybe have a tag in the folder bin /unbin that the app an check for and display a status
+
+
+
