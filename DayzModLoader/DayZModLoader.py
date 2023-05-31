@@ -189,6 +189,12 @@ class ModLoaderApp(QWidget):
         vbox.addSpacerItem(QtWidgets.QSpacerItem(0, 0))  # Add 20 pixels of vertical space
         vbox.addWidget(server_box)
         self.setLayout(vbox)
+        
+        # Version label not auto
+        version_label = QLabel("Version: 1.0.1") 
+        version_label.setAlignment(Qt.AlignRight) 
+        vbox.addWidget(version_label)
+
 
 # defs general
 
