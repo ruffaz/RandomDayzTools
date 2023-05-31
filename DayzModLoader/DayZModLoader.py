@@ -485,9 +485,13 @@ class ModLoaderApp(QWidget):
             mod_list_mods = mod_list.get("mods", [])
 
             for mod_path in mod_list_mods:
-                if not self.symlink_exists_in_other_mod_lists(mod_list_name, mod_path):
+                # mod_symlink_path
+                mod_symlink_path = os.path.join(self.server_path, os.path.basename(mod_path))
+
+                if not self.symlink_exists_in_other_mod_lists(mod_list_name, mod_symlink_path):
+                    print(f"Mod path to remove: {mod_symlink_path}")  # printing the mod_symlink_path instead
                     try:
-                        subprocess.run(f'rmdir "{mod_path}"', shell=True, check=True)
+                        subprocess.run(f'rmdir "{mod_symlink_path}"', shell=True, check=True)
                     except subprocess.CalledProcessError as e:
                         QtWidgets.QMessageBox.warning(self, "Error", f"Failed to remove junction: {e}")
 
