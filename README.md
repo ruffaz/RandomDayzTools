@@ -9,8 +9,7 @@ https://github.com/ruffaz/RandomDayzTools/releases/tag/Modloader
 WIP attempt to make a rudimentary UI for the lighting configs Dayz uses
 
 ## Pdrive mapper
-A utility to map any folder to a p: drive. Based off a tool I wrote for production use. Heavily battle tested in a busy game studio!
-Writes registry entries and is easily configurable.
+A utility to map any folder to a p: drive.
 
 ## Roadfixer
 Coming Soon
